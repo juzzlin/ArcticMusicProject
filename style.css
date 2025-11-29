@@ -146,3 +146,27 @@ footer {
 .social-links a:hover {
     color: #FF6B00;
 }
+
+/* --- Responsive Design for Mobile --- */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem; /* Smaller title font for phones */
+        letter-spacing: 0.1em;
+    }
+
+    h2 {
+        font-size: 2.2rem; /* Smaller section headers for phones */
+    }
+
+    main {
+        padding: 2rem 1rem; /* Reduce padding on mobile */
+    }
+
+    #about p {
+        font-size: 1.1rem; /* Adjust bio font size */
+    }
+
+    .song h3 {
+        font-size: 1.5rem; /* Adjust song title font size */
+    }
+}
