@@ -4,9 +4,6 @@ YouTube:
 YouTube Music:
 Spotify:
 SoundCloud: https://https://soundcloud.com/arctic-music-project/why
-TikTok:
-BandCamp:
-Amuse Smart Link:
 
 # Halla Returns
 
@@ -14,19 +11,13 @@ YouTube:
 YouTube Music:
 Spotify:
 SoundCloud: https://https://soundcloud.com/arctic-music-project/halla-returns
-TikTok:
-BandCamp:
-Amuse Smart Link:
 
 # Triple Distilled
 
 YouTube:
-YouTube Music:
-Spotify:
+YouTube Music: https://music.youtube.com/watch?v=m-u7tixvbmo
+Spotify: https://open.spotify.com/track/4QsPT2kHbBPmtM2tGoXJfe
 SoundCloud: https://soundcloud.com/arctic-music-project/triple-distilled
-TikTok:
-BandCamp:
-Amuse Smart Link:
 
 # Ultimate
 
@@ -34,9 +25,6 @@ YouTube: https://www.youtube.com/watch?v=JyhhMKldUTQ
 YouTube Music: https://music.youtube.com/watch?v=Px830jiJnQM
 Spotify: https://open.spotify.com/track/6e58L9ImwnK3EoMrkugj1a
 SoundCloud: https://soundcloud.com/arctic-music-project/ultimate
-TikTok:
-BandCamp:
-Amuse Smart Link: https://share.amuse.io/track/arctic-music-project-ultimate-2
 
 # 0035AM
 
@@ -44,9 +32,6 @@ YouTube: https://www.youtube.com/watch?v=TblfggnjdY0
 YouTube Music: https://music.youtube.com/watch?v=TblfggnjdY0
 Spotify: https://open.spotify.com/track/4yUJmFjBmUhOTyl8oXu1yU
 SoundCloud: https://soundcloud.com/arctic-music-project/0035am
-TikTok:
-BandCamp:
-Amuse Smart Link: https://share.amuse.io/track/arctic-music-project-0035am
 
 # Headache
 
@@ -54,9 +39,6 @@ YouTube: https://www.youtube.com/watch?v=IBlvtrh-d1w
 YouTube Music: https://music.youtube.com/watch?v=IBlvtrh-d1w
 Spotify: https://open.spotify.com/track/4XeltaReGWcopx9vP464BV
 SoundCloud: https://soundcloud.com/arctic-music-project/headache
-TikTok:
-BandCamp:
-Amuse Smart Link: https://share.amuse.io/track/arctic-music-project-headache
 
 # Endless
 
@@ -64,9 +46,6 @@ YouTube: https://www.youtube.com/watch?v=RnFFh7cyzxM
 YouTube Music: https://music.youtube.com/watch?v=RnFFh7cyzxM
 Spotify: https://open.spotify.com/track/38SATXWn653hCt1DcpYFO4
 SoundCloud: https://soundcloud.com/arctic-music-project/endless
-TikTok:
-BandCamp:
-Amuse Smart Link: https://share.amuse.io/track/arctic-music-project-endless
 
 # Epic Success
 
@@ -75,9 +54,6 @@ YouTube: https://www.youtube.com/watch?v=Tx_oNrJlvd0
 YouTube Music: https://music.youtube.com/watch?v=Tx_oNrJlvd0
 Spotify: https://open.spotify.com/track/6YNoAeZbB49p2bxoJA7gc1
 SoundCloud: https://soundcloud.com/arctic-music-project/epic-success
-TikTok:
-BandCamp:
-Amuse Smart Link: https://share.amuse.io/track/arctic-music-project-epic-success
 
 # Amen To Coffee (Vodka Remix)
 
@@ -85,9 +61,6 @@ YouTube: https://www.youtube.com/watch?v=ZuRyhguq3aE (YTM VIDEO)
 YouTube Music: https://www.youtube.com/watch?v=ZuRyhguq3aE
 Spotify: https://open.spotify.com/track/3LRUJHsZFlk4Lj8qVeadX3
 SoundCloud: https://soundcloud.com/arctic-music-project/amen-to-coffee-vodka-remix
-TikTok:
-BandCamp:
-Amuse Smart Link:
 
 # Halla
 
@@ -95,9 +68,6 @@ YouTube: https://www.youtube.com/watch?v=V--dK6A2FxQ (OWN VIDEO)
 YouTube Music: https://www.youtube.com/watch?v=TBqsTLem6BM
 Spotify: https://open.spotify.com/track/04v9gwT7L0wKbrY8MbIRao
 SoundCloud: https://soundcloud.com/arctic-music-project/halla
-TikTok:
-BandCamp:
-Amuse Smart Link: https://share.amuse.io/track/arctic-music-project-halla
 
 # Awesome
 
@@ -105,7 +75,4 @@ YouTube: https://www.youtube.com/watch?v=xRYCcsAtksU (OWN VIDEO)
 YouTube Music: https://music.youtube.com/watch?v=14PYY2RWniQ
 Spotify: https://open.spotify.com/track/4Sz1Zpb14p9vn1NbtA9Gl9
 SoundCloud: https://soundcloud.com/arctic-music-project/awesome
-TikTok:
-BandCamp:
-Amuse Smart Link:
 
