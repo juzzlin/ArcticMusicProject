@@ -27,7 +27,7 @@ header {
     text-align: center;
     position: relative;
     border-bottom: 3px solid #FF6B00;
-    overflow: hidden; /* Contain the parallax effect */
+    overflow: hidden;
 }
 
 header::after {
@@ -39,7 +39,6 @@ header::after {
     height: 100%;
     background: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
     z-index: 1;
 }
 
@@ -61,7 +60,7 @@ main {
 }
 
 section {
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
     padding: 2rem;
     border-radius: 12px;
@@ -85,23 +84,30 @@ h2 {
 .song-list {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px; /* Restored gap to 20px */
+    gap: 20px;
 }
 
 .song {
     background: #1a1a1a; 
     padding: 1.5rem;
     border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #333; /* Reverted border */
-    display: flex;
-    align-items: center;
-    gap: 1.5rem; /* Space between image and details */
+    border: 1px solid #333;
+    position: relative; /* OUTER CONTAINER */
 }
 
-.news-item:not(:first-child) {
-    margin-top: 20px;
+.song-content { /* INNER CONTAINER */
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.song-date {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 0.9rem;
+    color: #888;
+    z-index: 1;
 }
 
 .song:hover {
@@ -121,25 +127,12 @@ h2 {
     flex-grow: 1;
 }
 
-.song-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 1rem;
-}
-
-.song-date {
-    font-size: 0.9rem;
-    color: #888;
-    white-space: nowrap;
-    margin-left: 1rem;
-}
-
 .song h3 {
     font-size: 1.8rem;
     font-weight: 700;
     color: #FFFFFF;
-    margin: 0;
+    margin: 0 0 1rem 0;
+    padding-right: 70px; 
 }
 
 .song-links a {
@@ -160,49 +153,45 @@ h2 {
 }
 
 /* --- News Section --- */
-.news-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 1rem;
-}
-
-.news-date {
-    font-size: 0.9rem;
-    color: #888;
-    white-space: nowrap;
-    margin-left: 1rem;
-}
-
 .news-item {
     background-color: #1a1a1a;
     padding: 1.5rem;
     border-radius: 12px;
     border: 1px solid #333;
+    position: relative; /* OUTER CONTAINER */
 }
 
 .news-item:not(:first-child) {
     margin-top: 20px;
 }
 
+.news-date {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 0.9rem;
+    color: #888;
+}
+
 .news-item h3 {
-    color: #FFFFFF; /* Match song title color */
-    font-size: 1.8rem; /* Match song title size */
-    font-weight: 700; /* Match song title weight */
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    font-weight: 700;
     margin-top: 0;
     margin-bottom: 1rem;
+    padding-right: 100px;
 }
 
 .news-item p {
     margin: 0 0 1rem 0;
-    font-size: 1.25rem; /* Match biography font size */
-    line-height: 1.8;  /* Match biography line height */
+    font-size: 1.25rem;
+    line-height: 1.8;
 }
 
-/* --- Gallery Section --- */
+/* --- Gallery Section (Restored) --- */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2x2 Grid */
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
 }
 
@@ -219,6 +208,7 @@ h2 {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0,0,0,0.6);
 }
+
 
 footer {
     background: #1a1a1a;
@@ -258,17 +248,18 @@ footer {
         font-size: 1.1rem;
     }
 
-    .song {
+    .song-content {
         flex-direction: column;
         align-items: flex-start;
         text-align: left;
     }
 
-    .song h3 {
+    .song h3, .news-item h3 {
+        padding-right: 0;
         font-size: 1.5rem;
     }
-
+    
     .gallery-grid {
-        grid-template-columns: 1fr; /* Stack images in a single column on mobile */
+        grid-template-columns: 1fr;
     }
 }

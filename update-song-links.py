@@ -4,6 +4,7 @@ from PIL import Image
 from datetime import datetime
 
 def parse_songs(file_path):
+    # ... (parsing logic remains the same) ...
     with open(file_path, "r") as f:
         lines = f.readlines()
     
@@ -26,59 +27,56 @@ def parse_songs(file_path):
             current_song['image'] = image_path
             try:
                 mod_time = os.path.getmtime(image_path)
-                current_song['date'] = datetime.fromtimestamp(mod_time).strftime('%d %b %Y') # Changed format here
+                current_song['date'] = datetime.fromtimestamp(mod_time).strftime('%d %b %Y')
             except FileNotFoundError:
                 print(f"Warning: Image file not found for date extraction: {image_path}")
                 current_song['date'] = None
         elif ':' in stripped_line and current_song:
             platform, url_with_notes = stripped_line.split(':', 1)
             url = url_with_notes.strip()
-            
             url = re.sub(r'\s*\(.+?\)', '', url)
-            
             if url:
                 url = url.replace('https://https://', 'https://')
                 current_song['links'][platform.strip()] = url
     
     if current_song:
         songs.append(current_song)
-            
     return songs
 
 def process_and_generate_html(songs):
     song_list_html_lines = []
     for song in songs:
         if song.get('skip', False):
-            continue # Skip this song if the skip flag is True
+            continue
 
         image_path_html = ""
         if song['image']:
+            # ... (image processing logic remains the same) ...
             sanitized_title = re.sub(r'[^a-z0-9]+', '-', song['title'].lower()).strip('-')
             cover_dir = os.path.join('assets', 'covers', sanitized_title)
             output_path = os.path.join(cover_dir, 'cover.png')
             os.makedirs(cover_dir, exist_ok=True)
-            
             try:
                 with Image.open(song['image']) as img:
-                    resized_img = img.resize((256, 256))
-                    resized_img.save(output_path, 'PNG')
+                    img.resize((256, 256)).save(output_path, 'PNG')
                 image_path_html = f'<img src="{output_path}" alt="{song["title"]} Cover Art" class="song-cover">'
             except Exception as e:
                 print(f"Warning: Could not process image for {song['title']}. Error: {e}")
 
-        song_list_html_lines.append('                <div class="song">')
-        if image_path_html:
-            song_list_html_lines.append(f"                    {image_path_html}")
-        
-        song_list_html_lines.append('                    <div class="song-details">')
-        song_list_html_lines.append('                        <div class="song-header">')
-        song_list_html_lines.append(f"                            <h3>{song['title']}</h3>")
+        # New Outer/Inner Structure
+        song_list_html_lines.append('                <div class="song">') # Outer container
         if song['date']:
-            song_list_html_lines.append(f"                            <span class=\"song-date\">{song['date']}</span>")
-        song_list_html_lines.append('                        </div>')
-        song_list_html_lines.append('                        <div class="song-links">')
+            song_list_html_lines.append(f"                    <span class=\"song-date\">{song['date']}</span>")
+        
+        song_list_html_lines.append('                    <div class="song-content">') # Inner container
+        if image_path_html:
+            song_list_html_lines.append(f"                        {image_path_html}")
+        song_list_html_lines.append('                        <div class="song-details">')
+        song_list_html_lines.append(f"                            <h3>{song['title']}</h3>")
+        song_list_html_lines.append('                            <div class="song-links">')
         for platform, url in song["links"].items():
-            song_list_html_lines.append(f'                            <a href="{url}" target="_blank">{platform}</a>')
+            song_list_html_lines.append(f'                                <a href="{url}" target="_blank">{platform}</a>')
+        song_list_html_lines.append('                            </div>')
         song_list_html_lines.append('                        </div>')
         song_list_html_lines.append('                    </div>')
         song_list_html_lines.append('                </div>')
@@ -86,23 +84,18 @@ def process_and_generate_html(songs):
     return "\n".join(song_list_html_lines)
 
 def inject_html_with_markers(html_path, new_song_content):
+    # ... (injection logic remains the same) ...
     with open(html_path, "r") as f:
         html_content = f.read()
-
     start_marker = "<!-- SONG_LIST_START -->"
     end_marker = "<!-- SONG_LIST_END -->"
-    
     placeholder_regex = re.compile(f"({re.escape(start_marker)})(.*?)({re.escape(end_marker)})", re.DOTALL)
-
     def replacer(match):
-        return f"{match.group(1)}\n{new_song_content}\n            {match.group(3)}"
-
+        return f"{match.group(1)}\n{new_song_content}\n                {match.group(3)}"
     if not placeholder_regex.search(html_content):
          print(f"Error: Could not find '{start_marker}' and '{end_marker}' in {html_path}.")
          return
-         
     updated_html = placeholder_regex.sub(replacer, html_content)
-    
     with open(html_path, "w") as f:
         f.write(updated_html)
 
@@ -111,4 +104,4 @@ songs = parse_songs('BiisienLinkit.txt')
 song_html = process_and_generate_html(songs)
 inject_html_with_markers('index.html', song_html)
 
-print("update-song-links.py successfully updated the song list, respecting !SKIP directives.")
+print("update-song-links.py successfully updated with outer/inner container structure.")
