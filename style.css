@@ -185,13 +185,17 @@ h2 {
 }
 
 .news-item h3 {
-    color: #FF6B00;
+    color: #FFFFFF; /* Match song title color */
+    font-size: 1.8rem; /* Match song title size */
+    font-weight: 700; /* Match song title weight */
     margin-top: 0;
     margin-bottom: 1rem;
 }
 
 .news-item p {
     margin: 0 0 1rem 0;
+    font-size: 1.25rem; /* Match biography font size */
+    line-height: 1.8;  /* Match biography line height */
 }
 
 footer {
