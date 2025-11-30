@@ -61,7 +61,7 @@ main {
 }
 
 section {
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
     padding: 2rem;
     border-radius: 12px;
@@ -199,6 +199,27 @@ h2 {
     line-height: 1.8;  /* Match biography line height */
 }
 
+/* --- Gallery Section --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2x2 Grid */
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+}
+
 footer {
     background: #1a1a1a;
     text-align: center;
@@ -245,5 +266,9 @@ footer {
 
     .song h3 {
         font-size: 1.5rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Stack images in a single column on mobile */
     }
 }
