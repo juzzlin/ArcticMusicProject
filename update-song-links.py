@@ -18,12 +18,13 @@ def parse_songs(file_path):
         if stripped_line.startswith('#'):
             if current_song:
                 songs.append(current_song)
-            current_song = {'title': stripped_line[1:].strip(), 'links': {}, 'image': None, 'date': None}
+            current_song = {'title': stripped_line[1:].strip(), 'links': {}, 'image': None, 'date': None, 'skip': False}
+        elif stripped_line == '!SKIP' and current_song:
+            current_song['skip'] = True
         elif stripped_line.startswith('!IMAGE:') and current_song:
             image_path = stripped_line.replace('!IMAGE:', '').strip()
             current_song['image'] = image_path
             try:
-                # Get file modification timestamp and format it
                 mod_time = os.path.getmtime(image_path)
                 current_song['date'] = datetime.fromtimestamp(mod_time).strftime('%b %Y')
             except FileNotFoundError:
@@ -47,6 +48,9 @@ def parse_songs(file_path):
 def process_and_generate_html(songs):
     song_list_html_lines = []
     for song in songs:
+        if song.get('skip', False):
+            continue # Skip this song if the skip flag is True
+
         image_path_html = ""
         if song['image']:
             sanitized_title = re.sub(r'[^a-z0-9]+', '-', song['title'].lower()).strip('-')
@@ -107,4 +111,4 @@ songs = parse_songs('BiisienLinkit.txt')
 song_html = process_and_generate_html(songs)
 inject_html_with_markers('index.html', song_html)
 
-print("update-song-links.py successfully updated the song list with dates and cover images.")
+print("update-song-links.py successfully updated the song list, respecting !SKIP directives.")

@@ -84,10 +84,7 @@ h2 {
 .song-list {
     display: grid;
     grid-template-columns: 1fr;
-}
-
-.song:not(:first-child) {
-    margin-top: 20px; /* Add spacing to all but the first song item */
+    gap: 20px; /* Restored gap for spacing */
 }
 
 .song {

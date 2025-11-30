@@ -53,6 +53,7 @@ YouTube Music: https://music.youtube.com/watch?v=RnFFh7cyzxM
 Spotify: https://open.spotify.com/track/38SATXWn653hCt1DcpYFO4
 SoundCloud: https://soundcloud.com/arctic-music-project/endless
 !IMAGE: ../../../ArcticMusicProject/2025/Endless/Julkaisut/SoundCloud/Grafiikka/AlbumCover_1024x1024.png
+!SKIP
 
 # Epic Success
 
@@ -62,6 +63,7 @@ YouTube Music: https://music.youtube.com/watch?v=Tx_oNrJlvd0
 Spotify: https://open.spotify.com/track/6YNoAeZbB49p2bxoJA7gc1
 SoundCloud: https://soundcloud.com/arctic-music-project/epic-success
 !IMAGE: ../../../ArcticMusicProject/2025/EpicSuccess/Grafiikka/V2/AlbumCover_3000x3000.png
+!SKIP
 
 # Amen To Coffee (Vodka Remix)
 
@@ -70,6 +72,7 @@ YouTube Music: https://www.youtube.com/watch?v=ZuRyhguq3aE
 Spotify: https://open.spotify.com/track/3LRUJHsZFlk4Lj8qVeadX3
 SoundCloud: https://soundcloud.com/arctic-music-project/amen-to-coffee-vodka-remix
 !IMAGE: ../../../ArcticMusicProject/2025/AmenToCoffee/Grafiikka/AlbumCover_4096x4096.png
+!SKIP
 
 # Halla
 
@@ -78,6 +81,7 @@ YouTube Music: https://www.youtube.com/watch?v=TBqsTLem6BM
 Spotify: https://open.spotify.com/track/04v9gwT7L0wKbrY8MbIRao
 SoundCloud: https://soundcloud.com/arctic-music-project/halla
 !IMAGE: ../../../ArcticMusicProject/2025/Halla/Julkaisut/SoundCloud/Grafiikka/OriginalV2/AlbumCover_1024x1024.png
+!SKIP
 
 # Awesome
 
@@ -86,4 +90,5 @@ YouTube Music: https://music.youtube.com/watch?v=14PYY2RWniQ
 Spotify: https://open.spotify.com/track/4Sz1Zpb14p9vn1NbtA9Gl9
 SoundCloud: https://soundcloud.com/arctic-music-project/awesome
 !IMAGE: ../../../ArcticMusicProject/2025/Awesome/Grafiikka/V2/AlbumCover_3000x3000.png
+!SKIP
 
