@@ -81,23 +81,22 @@ h2 {
     letter-spacing: 0.1em;
 }
 
-
 .song-list {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
 }
 
 .song {
     background: #1a1a1a; 
-    padding: 1.5rem; /* Adjusted padding */
+    padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #333;
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Vertically align items */
-    gap: 1.5rem; /* Space between image and details */
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 20px; /* Add spacing between song items */
 }
 
 .song:hover {
@@ -106,15 +105,15 @@ h2 {
 }
 
 .song-cover {
-    width: 100px; /* Set a fixed width for the cover */
-    height: 100px; /* Set a fixed height for the cover */
-    border-radius: 8px; /* Slightly rounded corners for the cover */
-    object-fit: cover; /* Ensure image covers the area without distortion */
-    flex-shrink: 0; /* Prevent image from shrinking */
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
 }
 
 .song-details {
-    flex-grow: 1; /* Allow the details to take up remaining space */
+    flex-grow: 1;
 }
 
 .song h3 {
@@ -129,7 +128,7 @@ h2 {
     display: inline-block;
     color: #FF6B00;
     text-decoration: none;
-    margin: 0.5rem 0.5rem 0.5rem 0; /* Adjusted margin */
+    margin: 0.5rem 0.5rem 0.5rem 0;
     padding: 0.5rem 1rem;
     border: 2px solid #FF6B00;
     border-radius: 4px;
@@ -162,7 +161,6 @@ footer {
     color: #FF6B00;
 }
 
-/* --- Responsive Design for Mobile --- */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.5rem;
@@ -182,8 +180,8 @@ footer {
     }
 
     .song {
-        flex-direction: column; /* Stack image on top of details */
-        align-items: flex-start; /* Align to the start */
+        flex-direction: column;
+        align-items: flex-start;
         text-align: left;
     }
 
