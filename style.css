@@ -92,10 +92,10 @@ h2 {
     padding: 1.5rem;
     border-radius: 12px;
     border: 1px solid #333;
-    position: relative; /* OUTER CONTAINER */
+    position: relative;
 }
 
-.song-content { /* INNER CONTAINER */
+.song-content {
     display: flex;
     align-items: center;
     gap: 1.5rem;
@@ -132,7 +132,7 @@ h2 {
     font-weight: 700;
     color: #FFFFFF;
     margin: 0 0 1rem 0;
-    padding-right: 70px; 
+    padding-right: 120px;
 }
 
 .song-links a {
@@ -152,13 +152,12 @@ h2 {
     background-color: #FF6B00;
 }
 
-/* --- News Section --- */
 .news-item {
     background-color: #1a1a1a;
     padding: 1.5rem;
     border-radius: 12px;
     border: 1px solid #333;
-    position: relative; /* OUTER CONTAINER */
+    position: relative;
 }
 
 .news-item:not(:first-child) {
@@ -179,7 +178,11 @@ h2 {
     font-weight: 700;
     margin-top: 0;
     margin-bottom: 1rem;
-    padding-right: 100px;
+    padding-right: 120px;
+}
+
+.news-item p:first-of-type {
+    margin-top: 1.5rem;
 }
 
 .news-item p {
@@ -188,7 +191,6 @@ h2 {
     line-height: 1.8;
 }
 
-/* --- Gallery Section (Restored) --- */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -208,7 +210,6 @@ h2 {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0,0,0,0.6);
 }
-
 
 footer {
     background: #1a1a1a;
@@ -255,7 +256,6 @@ footer {
     }
 
     .song h3, .news-item h3 {
-        padding-right: 0;
         font-size: 1.5rem;
     }
     
