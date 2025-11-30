@@ -26,7 +26,7 @@ def parse_songs(file_path):
             current_song['image'] = image_path
             try:
                 mod_time = os.path.getmtime(image_path)
-                current_song['date'] = datetime.fromtimestamp(mod_time).strftime('%b %Y')
+                current_song['date'] = datetime.fromtimestamp(mod_time).strftime('%d %b %Y') # Changed format here
             except FileNotFoundError:
                 print(f"Warning: Image file not found for date extraction: {image_path}")
                 current_song['date'] = None
