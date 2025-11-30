@@ -84,7 +84,7 @@ h2 {
 .song-list {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px; /* Restored gap for spacing */
+    gap: 20px; /* Restored gap to 20px */
 }
 
 .song {
@@ -93,10 +93,14 @@ h2 {
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #333;
+    border: 1px solid #333; /* Reverted border */
     display: flex;
     align-items: center;
     gap: 1.5rem; /* Space between image and details */
+}
+
+.news-item:not(:first-child) {
+    margin-top: 20px;
 }
 
 .song:hover {
@@ -152,6 +156,42 @@ h2 {
 .song-links a:hover {
     color: #121212;
     background-color: #FF6B00;
+}
+
+/* --- News Section --- */
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.news-date {
+    font-size: 0.9rem;
+    color: #888;
+    white-space: nowrap;
+    margin-left: 1rem;
+}
+
+.news-item {
+    background-color: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid #333;
+}
+
+.news-item:not(:first-child) {
+    margin-top: 20px;
+}
+
+.news-item h3 {
+    color: #FF6B00;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.news-item p {
+    margin: 0 0 1rem 0;
 }
 
 footer {
