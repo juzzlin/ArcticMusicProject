@@ -1,6 +1,7 @@
 import re
 import os
 from PIL import Image
+from datetime import datetime
 
 def parse_songs(file_path):
     with open(file_path, "r") as f:
@@ -17,9 +18,17 @@ def parse_songs(file_path):
         if stripped_line.startswith('#'):
             if current_song:
                 songs.append(current_song)
-            current_song = {'title': stripped_line[1:].strip(), 'links': {}, 'image': None}
+            current_song = {'title': stripped_line[1:].strip(), 'links': {}, 'image': None, 'date': None}
         elif stripped_line.startswith('!IMAGE:') and current_song:
-            current_song['image'] = stripped_line.replace('!IMAGE:', '').strip()
+            image_path = stripped_line.replace('!IMAGE:', '').strip()
+            current_song['image'] = image_path
+            try:
+                # Get file modification timestamp and format it
+                mod_time = os.path.getmtime(image_path)
+                current_song['date'] = datetime.fromtimestamp(mod_time).strftime('%b %Y')
+            except FileNotFoundError:
+                print(f"Warning: Image file not found for date extraction: {image_path}")
+                current_song['date'] = None
         elif ':' in stripped_line and current_song:
             platform, url_with_notes = stripped_line.split(':', 1)
             url = url_with_notes.strip()
@@ -58,7 +67,11 @@ def process_and_generate_html(songs):
             song_list_html_lines.append(f"                    {image_path_html}")
         
         song_list_html_lines.append('                    <div class="song-details">')
-        song_list_html_lines.append(f"                        <h3>{song['title']}</h3>")
+        song_list_html_lines.append('                        <div class="song-header">')
+        song_list_html_lines.append(f"                            <h3>{song['title']}</h3>")
+        if song['date']:
+            song_list_html_lines.append(f"                            <span class=\"song-date\">{song['date']}</span>")
+        song_list_html_lines.append('                        </div>')
         song_list_html_lines.append('                        <div class="song-links">')
         for platform, url in song["links"].items():
             song_list_html_lines.append(f'                            <a href="{url}" target="_blank">{platform}</a>')
@@ -72,23 +85,18 @@ def inject_html_with_markers(html_path, new_song_content):
     with open(html_path, "r") as f:
         html_content = f.read()
 
-    start_marker = "<!-- SONG LIST START -->"
-    end_marker = "<!-- SONG LIST END -->"
+    start_marker = "<!-- SONG_LIST_START -->"
+    end_marker = "<!-- SONG_LIST_END -->"
     
-    # Regex to find the content between the markers
     placeholder_regex = re.compile(f"({re.escape(start_marker)})(.*?)({re.escape(end_marker)})", re.DOTALL)
 
-    # Function to perform the replacement
     def replacer(match):
-        # Keep the markers, replace the content between them
         return f"{match.group(1)}\n{new_song_content}\n            {match.group(3)}"
 
-    # Check if the markers are found
     if not placeholder_regex.search(html_content):
          print(f"Error: Could not find '{start_marker}' and '{end_marker}' in {html_path}.")
          return
          
-    # Perform the replacement
     updated_html = placeholder_regex.sub(replacer, html_content)
     
     with open(html_path, "w") as f:
@@ -99,4 +107,4 @@ songs = parse_songs('BiisienLinkit.txt')
 song_html = process_and_generate_html(songs)
 inject_html_with_markers('index.html', song_html)
 
-print("update-song-links.py successfully updated the song list using the marker comments.")
+print("update-song-links.py successfully updated the song list with dates and cover images.")

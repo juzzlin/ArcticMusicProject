@@ -86,6 +86,10 @@ h2 {
     grid-template-columns: 1fr;
 }
 
+.song:not(:first-child) {
+    margin-top: 20px; /* Add spacing to all but the first song item */
+}
+
 .song {
     background: #1a1a1a; 
     padding: 1.5rem;
@@ -95,8 +99,7 @@ h2 {
     border: 1px solid #333;
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    margin-bottom: 20px; /* Add spacing between song items */
+    gap: 1.5rem; /* Space between image and details */
 }
 
 .song:hover {
@@ -116,12 +119,25 @@ h2 {
     flex-grow: 1;
 }
 
+.song-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.song-date {
+    font-size: 0.9rem;
+    color: #888;
+    white-space: nowrap;
+    margin-left: 1rem;
+}
+
 .song h3 {
     font-size: 1.8rem;
     font-weight: 700;
     color: #FFFFFF;
-    margin-top: 0;
-    margin-bottom: 1rem;
+    margin: 0;
 }
 
 .song-links a {
