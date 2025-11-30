@@ -1,4 +1,6 @@
 import re
+import os
+from PIL import Image
 
 def parse_songs(file_path):
     with open(file_path, "r") as f:
@@ -15,12 +17,13 @@ def parse_songs(file_path):
         if stripped_line.startswith('#'):
             if current_song:
                 songs.append(current_song)
-            current_song = {'title': stripped_line[1:].strip(), 'links': {}}
+            current_song = {'title': stripped_line[1:].strip(), 'links': {}, 'image': None}
+        elif stripped_line.startswith('!IMAGE:') and current_song:
+            current_song['image'] = stripped_line.replace('!IMAGE:', '').strip()
         elif ':' in stripped_line and current_song:
             platform, url_with_notes = stripped_line.split(':', 1)
             url = url_with_notes.strip()
             
-            # Strip parenthetical notes from the URL
             url = re.sub(r'\s*\(.+?\)', '', url)
             
             if url:
@@ -32,42 +35,68 @@ def parse_songs(file_path):
             
     return songs
 
-def generate_html(songs):
-    song_list_html = ""
+def process_and_generate_html(songs):
+    song_list_html_lines = []
     for song in songs:
-        song_list_html += '                <div class="song">\n'
-        song_list_html += f"                    <h3>&#128191; {song['title']}</h3>\n"
-        song_list_html += '                    <div class="song-links">\n'
-        for platform, url in song["links"].items():
-            song_list_html += f'                        <a href="{url}" target="_blank">{platform}</a>\n'
-        song_list_html += '                    </div>\n'
-        song_list_html += '                </div>\n'
-    return song_list_html
+        image_path_html = ""
+        if song['image']:
+            sanitized_title = re.sub(r'[^a-z0-9]+', '-', song['title'].lower()).strip('-')
+            cover_dir = os.path.join('assets', 'covers', sanitized_title)
+            output_path = os.path.join(cover_dir, 'cover.png')
+            os.makedirs(cover_dir, exist_ok=True)
+            
+            try:
+                with Image.open(song['image']) as img:
+                    resized_img = img.resize((256, 256))
+                    resized_img.save(output_path, 'PNG')
+                image_path_html = f'<img src="{output_path}" alt="{song["title"]} Cover Art" class="song-cover">'
+            except Exception as e:
+                print(f"Warning: Could not process image for {song['title']}. Error: {e}")
 
-def inject_html(html_path, new_song_content):
+        song_list_html_lines.append('                <div class="song">')
+        if image_path_html:
+            song_list_html_lines.append(f"                    {image_path_html}")
+        
+        song_list_html_lines.append('                    <div class="song-details">')
+        song_list_html_lines.append(f"                        <h3>{song['title']}</h3>")
+        song_list_html_lines.append('                        <div class="song-links">')
+        for platform, url in song["links"].items():
+            song_list_html_lines.append(f'                            <a href="{url}" target="_blank">{platform}</a>')
+        song_list_html_lines.append('                        </div>')
+        song_list_html_lines.append('                    </div>')
+        song_list_html_lines.append('                </div>')
+        
+    return "\n".join(song_list_html_lines)
+
+def inject_html_with_markers(html_path, new_song_content):
     with open(html_path, "r") as f:
         html_content = f.read()
-    
-    # This regex finds the song-list div and captures its opening and closing tags.
-    # It will replace everything inside the div.
-    placeholder_regex = r'(<div class="song-list">)(.*?)(</div>)'
-    
-    # Use a replacer function for robust replacement
-    def replacer(match):
-        opening_tag = match.group(1) # <div class="song-list">
-        closing_tag = match.group(3) # </div>
-        # Rebuild the div with only the new content
-        return f"{opening_tag}\n{new_song_content}\n            {closing_tag}"
 
-    # Pass the function as the replacement argument
-    updated_html = re.sub(placeholder_regex, replacer, html_content, flags=re.DOTALL)
+    start_marker = "<!-- SONG LIST START -->"
+    end_marker = "<!-- SONG LIST END -->"
+    
+    # Regex to find the content between the markers
+    placeholder_regex = re.compile(f"({re.escape(start_marker)})(.*?)({re.escape(end_marker)})", re.DOTALL)
+
+    # Function to perform the replacement
+    def replacer(match):
+        # Keep the markers, replace the content between them
+        return f"{match.group(1)}\n{new_song_content}\n            {match.group(3)}"
+
+    # Check if the markers are found
+    if not placeholder_regex.search(html_content):
+         print(f"Error: Could not find '{start_marker}' and '{end_marker}' in {html_path}.")
+         return
+         
+    # Perform the replacement
+    updated_html = placeholder_regex.sub(replacer, html_content)
     
     with open(html_path, "w") as f:
         f.write(updated_html)
 
 # Main execution
 songs = parse_songs('BiisienLinkit.txt')
-song_html = generate_html(songs)
-inject_html('index.html', song_html)
+song_html = process_and_generate_html(songs)
+inject_html_with_markers('index.html', song_html)
 
-print("parser.py successfully updated the song list in index.html with the correct replacement logic.")
+print("update-song-links.py successfully updated the song list using the marker comments.")

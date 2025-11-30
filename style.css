@@ -90,16 +90,31 @@ h2 {
 
 .song {
     background: #1a1a1a; 
-    padding: 2rem;
+    padding: 1.5rem; /* Adjusted padding */
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #333;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically align items */
+    gap: 1.5rem; /* Space between image and details */
 }
 
 .song:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 20px rgba(255,107,0,0.2), 0 4px 15px rgba(0,0,0,0.6);
+}
+
+.song-cover {
+    width: 100px; /* Set a fixed width for the cover */
+    height: 100px; /* Set a fixed height for the cover */
+    border-radius: 8px; /* Slightly rounded corners for the cover */
+    object-fit: cover; /* Ensure image covers the area without distortion */
+    flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.song-details {
+    flex-grow: 1; /* Allow the details to take up remaining space */
 }
 
 .song h3 {
@@ -114,7 +129,7 @@ h2 {
     display: inline-block;
     color: #FF6B00;
     text-decoration: none;
-    margin: 0.5rem 0;
+    margin: 0.5rem 0.5rem 0.5rem 0; /* Adjusted margin */
     padding: 0.5rem 1rem;
     border: 2px solid #FF6B00;
     border-radius: 4px;
@@ -150,23 +165,29 @@ footer {
 /* --- Responsive Design for Mobile --- */
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2.5rem; /* Smaller title font for phones */
+        font-size: 2.5rem;
         letter-spacing: 0.1em;
     }
 
     h2 {
-        font-size: 2.2rem; /* Smaller section headers for phones */
+        font-size: 2.2rem;
     }
 
     main {
-        padding: 2rem 1rem; /* Reduce padding on mobile */
+        padding: 2rem 1rem;
     }
 
     #about p {
-        font-size: 1.1rem; /* Adjust bio font size */
+        font-size: 1.1rem;
+    }
+
+    .song {
+        flex-direction: column; /* Stack image on top of details */
+        align-items: flex-start; /* Align to the start */
+        text-align: left;
     }
 
     .song h3 {
-        font-size: 1.5rem; /* Adjust song title font size */
+        font-size: 1.5rem;
     }
 }
