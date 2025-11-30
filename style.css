@@ -27,6 +27,7 @@ header {
     text-align: center;
     position: relative;
     border-bottom: 3px solid #FF6B00;
+    overflow: hidden; /* Contain the parallax effect */
 }
 
 header::after {
