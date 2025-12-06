@@ -10,7 +10,7 @@ SoundCloud: https://https://soundcloud.com/arctic-music-project/why
 
 YouTube:
 YouTube Music:
-Spotify:
+Spotify: https://open.spotify.com/track/3u41H8VAhHHL2B9FDHykpW
 SoundCloud: https://https://soundcloud.com/arctic-music-project/halla-returns
 !IMAGE: ../../../ArcticMusicProject/2025/HallaReturns/Grafiikka/AlbumCover_4096x4096.png
 
