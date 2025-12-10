@@ -1,15 +1,15 @@
 # Why
 
 YouTube:
-YouTube Music:
-Spotify:
+YouTube Music: https://music.youtube.com/watch?v=DfomMagf5EQ
+Spotify: https://open.spotify.com/track/0D3bbioCFxRzewAWS1X7Jp
 SoundCloud: https://https://soundcloud.com/arctic-music-project/why
 !IMAGE: ../../../ArcticMusicProject/2025/Why/Grafiikka/AlbumCover_4096x4096.png
 
 # Halla Returns
 
 YouTube:
-YouTube Music:
+YouTube Music: https://music.youtube.com/watch?v=_PmHujs6U4Q
 Spotify: https://open.spotify.com/track/3u41H8VAhHHL2B9FDHykpW
 SoundCloud: https://https://soundcloud.com/arctic-music-project/halla-returns
 !IMAGE: ../../../ArcticMusicProject/2025/HallaReturns/Grafiikka/AlbumCover_4096x4096.png
