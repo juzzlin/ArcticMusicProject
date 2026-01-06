@@ -8,10 +8,11 @@ SoundCloud: https://soundcloud.com/arctic-music-project/ultimate-dj-frostbite-xm
 
 # Pointless
 
-YouTube:
-YouTube Music:
-Spotify:
+YouTube: https://www.youtube.com/watch?v=xXXgGbOZIV0
+YouTube Music: https://music.youtube.com/watch?v=JqZ88P2pbAM
+Spotify: https://open.spotify.com/track/4SyCYRfmc1hoIMqq0wZJOM
 SoundCloud: https://soundcloud.com/arctic-music-project/pointless
+Apple Music: https://music.apple.com/us/album/pointless/1865756443
 !IMAGE: ../../../ArcticMusicProject/2025/Pointless/Grafiikka/AlbumCover_4096x4096.png
 
 # Why
