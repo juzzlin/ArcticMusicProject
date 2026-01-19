@@ -29,6 +29,7 @@ YouTube:
 YouTube Music: https://music.youtube.com/watch?v=DfomMagf5EQ
 Spotify: https://open.spotify.com/track/0D3bbioCFxRzewAWS1X7Jp
 SoundCloud: https://soundcloud.com/arctic-music-project/why
+Apple Music: https://music.apple.com/us/album/why-single/1856739083
 !IMAGE: ../../../ArcticMusicProject/2025/Why/Grafiikka/AlbumCover_4096x4096.png
 
 # Halla Returns
@@ -37,6 +38,7 @@ YouTube:
 YouTube Music: https://music.youtube.com/watch?v=_PmHujs6U4Q
 Spotify: https://open.spotify.com/track/3u41H8VAhHHL2B9FDHykpW
 SoundCloud: https://soundcloud.com/arctic-music-project/halla-returns
+Apple Music: https://music.apple.com/us/album/halla-returns-single/1869763369
 !IMAGE: ../../../ArcticMusicProject/2025/HallaReturns/Grafiikka/AlbumCover_4096x4096.png
 
 # Triple Distilled
@@ -45,6 +47,7 @@ YouTube:
 YouTube Music: https://music.youtube.com/watch?v=m-u7tixvbmo
 Spotify: https://open.spotify.com/track/4QsPT2kHbBPmtM2tGoXJfe
 SoundCloud: https://soundcloud.com/arctic-music-project/triple-distilled
+Apple Music: https://music.apple.com/us/album/triple-distilled-single/1852127751
 !IMAGE: ../../../ArcticMusicProject/2025/TripleDistilled/Grafiikka/AlbumCover_4096x4096.png
 
 # Ultimate
@@ -53,6 +56,7 @@ YouTube: https://www.youtube.com/watch?v=JyhhMKldUTQ
 YouTube Music: https://music.youtube.com/watch?v=Px830jiJnQM
 Spotify: https://open.spotify.com/track/6e58L9ImwnK3EoMrkugj1a
 SoundCloud: https://soundcloud.com/arctic-music-project/ultimate
+Apple Music: https://music.apple.com/us/album/ultimate-single/1852127778
 !IMAGE: ../../../ArcticMusicProject/2025/Ultimate/Grafiikka/AlbumCover_4096x4096.png
 
 # 0035AM
@@ -61,6 +65,7 @@ YouTube: https://www.youtube.com/watch?v=TblfggnjdY0
 YouTube Music: https://music.youtube.com/watch?v=TblfggnjdY0
 Spotify: https://open.spotify.com/track/4yUJmFjBmUhOTyl8oXu1yU
 SoundCloud: https://soundcloud.com/arctic-music-project/0035am
+Apple Music: https://music.apple.com/us/album/0035am-single/1844297300
 !IMAGE: ../../../ArcticMusicProject/2025/0035AM/Grafiikka/AlbumCover_4096x4096.png
 
 # Headache
@@ -69,6 +74,7 @@ YouTube: https://www.youtube.com/watch?v=IBlvtrh-d1w
 YouTube Music: https://music.youtube.com/watch?v=IBlvtrh-d1w
 Spotify: https://open.spotify.com/track/4XeltaReGWcopx9vP464BV
 SoundCloud: https://soundcloud.com/arctic-music-project/headache
+Apple Music: https://music.apple.com/us/album/headache-single/1840513411
 !IMAGE: ../../../ArcticMusicProject/2025/Headache/Grafiikka/AlbumCover_3000x3000.png
 
 # Endless
