@@ -35,8 +35,8 @@ Apple Music: https://music.apple.com/us/album/why-single/1856739083
 # Halla Returns
 
 YouTube:
-YouTube Music: https://music.youtube.com/watch?v=_PmHujs6U4Q
-Spotify: https://open.spotify.com/track/3u41H8VAhHHL2B9FDHykpW
+YouTube Music: https://https://music.youtube.com/watch?v=gBNgLBlXzXk
+Spotify: https://open.spotify.com/track/424khJboJjdRvAKsio2iX7
 SoundCloud: https://soundcloud.com/arctic-music-project/halla-returns
 Apple Music: https://music.apple.com/us/album/halla-returns-single/1869763369
 !IMAGE: ../../../ArcticMusicProject/2025/HallaReturns/Grafiikka/AlbumCover_4096x4096.png
