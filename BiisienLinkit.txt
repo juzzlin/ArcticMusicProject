@@ -11,11 +11,11 @@ Deezer:
 # Your Love
 
 YouTube:
-YouTube Music:
-Spotify:
+YouTube Music: https://music.youtube.com/watch?v=sZmois7v6NI
+Spotify: https://open.spotify.com/track/1s2hw68GyPfwUfOOkuaGLn
 SoundCloud: https://soundcloud.com/arctic-music-project/your-love
-Apple Music:
-Deezer:
+Apple Music: https://music.apple.com/us/album/your-love/1891067132
+Deezer: https://www.deezer.com/track/3944617571
 !IMAGE: ../../../ArcticMusicProject/2026/YourLove/Grafiikka/AlbumCover_3000x3000.png
 
 # Hope
