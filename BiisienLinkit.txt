@@ -1,11 +1,11 @@
 # Incredible Times
 
 YouTube:
-YouTube Music:
-Spotify:
+YouTube Music: https://music.youtube.com/watch?v=icdZ1M1lN-I
+Spotify: https://open.spotify.com/track/5mnyB4BaIhdKecEkendF6E
 SoundCloud: https://soundcloud.com/arctic-music-project/incredible-times
-Apple Music:
-Deezer:
+Apple Music: https://www.deezer.com/us/track/3952943501
+Deezer: https://www.deezer.com/us/track/3952943501
 !IMAGE: ../../../ArcticMusicProject/2026/IncredibleTimes/Grafiikka/AlbumCover_3000x3000.png
 
 # Your Love
