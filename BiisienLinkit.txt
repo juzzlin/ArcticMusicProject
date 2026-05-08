@@ -1,11 +1,11 @@
 # My Real Name
 
 YouTube:
-YouTube Music:
-Spotify:
+YouTube Music: https://music.youtube.com/watch?v=pE7SP3KsH3U
+Spotify: https://open.spotify.com/track/2WN79Gzazaq0xtji9t0ORI
 SoundCloud: https://soundcloud.com/arctic-music-project/my-real-name
-Apple Music:
-Deezer:
+Apple Music: https://music.apple.com/us/album/my-real-name/1895532307
+Deezer: https://www.deezer.com/track/3985747831
 !IMAGE: ../../../ArcticMusicProject/2026/MyRealName/Grafiikka/AlbumCover_3000x3000.png
 
 # Incredible Times
