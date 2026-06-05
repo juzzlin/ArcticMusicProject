@@ -11,11 +11,11 @@ Deezer:
 # Raindrops
 
 YouTube:
-YouTube Music:
-Spotify:
+YouTube Music: https://music.youtube.com/watch?v=tNoZ9S8KPDo
+Spotify: https://open.spotify.com/track/3yukfcwKFzTlyI6cnIyzIa
 SoundCloud: https://soundcloud.com/arctic-music-project/raindrops
-Apple Music:
-Deezer:
+Apple Music: https://music.apple.com/us/album/raindrops/6771408948?i=6771408951
+Deezer: https://www.deezer.com/us/track/4033515691
 !IMAGE: ../../../ArcticMusicProject/2026/Raindrops/Grafiikka/AlbumCover_3000x3000.png
 
 # My Real Name
