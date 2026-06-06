@@ -136,6 +136,7 @@ h2 {
     padding-right: 120px;
 }
 
+.playlist-links a,
 .song-links a {
     display: inline-block;
     color: #FF6B00;
@@ -148,6 +149,7 @@ h2 {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.playlist-links a:hover,
 .song-links a:hover {
     color: #121212;
     background-color: #FF6B00;
