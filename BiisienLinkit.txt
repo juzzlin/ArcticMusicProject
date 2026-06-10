@@ -20,7 +20,7 @@ Deezer: https://www.deezer.com/us/track/4033515691
 
 # My Real Name
 
-YouTube:
+YouTube: https://www.youtube.com/watch?v=-_g-alosFYw
 YouTube Music: https://music.youtube.com/watch?v=pE7SP3KsH3U
 Spotify: https://open.spotify.com/track/2WN79Gzazaq0xtji9t0ORI
 SoundCloud: https://soundcloud.com/arctic-music-project/my-real-name
@@ -30,7 +30,7 @@ Deezer: https://www.deezer.com/track/3985747831
 
 # Incredible Times
 
-YouTube:
+YouTube: https://www.youtube.com/watch?v=7Vs2J47fLNA
 YouTube Music: https://music.youtube.com/watch?v=icdZ1M1lN-I
 Spotify: https://open.spotify.com/track/5mnyB4BaIhdKecEkendF6E
 SoundCloud: https://soundcloud.com/arctic-music-project/incredible-times
@@ -40,7 +40,7 @@ Deezer: https://www.deezer.com/us/track/3952943501
 
 # Your Love
 
-YouTube:
+YouTube: https://www.youtube.com/watch?v=QGdNDrskkVE
 YouTube Music: https://music.youtube.com/watch?v=sZmois7v6NI
 Spotify: https://open.spotify.com/track/1s2hw68GyPfwUfOOkuaGLn
 SoundCloud: https://soundcloud.com/arctic-music-project/your-love
