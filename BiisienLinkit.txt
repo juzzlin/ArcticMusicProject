@@ -1,12 +1,12 @@
-# Awesome (Noteahead Remix)
+# Massive
 
 YouTube:
 YouTube Music:
 Spotify:
-SoundCloud: https://soundcloud.com/arctic-music-project/awesome-noteahead-remix
+SoundCloud: https://soundcloud.com/arctic-music-project/massive
 Apple Music:
 Deezer:
-!IMAGE: ../../../ArcticMusicProject/2026/Awesome_NoteaheadRemix/Grafiikka/AlbumCover_3000x3000.png
+!IMAGE: ../../../ArcticMusicProject/2026/Massive/Grafiikka/AlbumCover_3000x3000.png
 
 # Raindrops
 
