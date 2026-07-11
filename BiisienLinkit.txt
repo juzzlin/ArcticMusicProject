@@ -2,10 +2,11 @@
 
 YouTube: https://www.youtube.com/watch?v=lEbdaRX2liw
 YouTube Music:
-Spotify:
+Spotify: https://open.spotify.com/track/2whivQNa9qIfSSLSuYgUFf
 SoundCloud: https://soundcloud.com/arctic-music-project/massive
-Apple Music:
-Deezer:
+Apple Music: https://music.apple.com/us/album/massive/6785924355?i=6785924357
+Deezer: https://www.deezer.com/us/track/4124223101
+Tidal: https://tidal.com/track/538718064
 !IMAGE: ../../../ArcticMusicProject/2026/Massive/Grafiikka/AlbumCover_3000x3000.png
 
 # Raindrops
