@@ -107,7 +107,7 @@ YouTube Music: https://music.youtube.com/watch?v=JqZ88P2pbAM
 Spotify: https://open.spotify.com/track/4SyCYRfmc1hoIMqq0wZJOM
 SoundCloud: https://soundcloud.com/arctic-music-project/pointless
 Apple Music: https://music.apple.com/us/album/pointless/1865756443
-!IMAGE: ../../../ArcticMusicProject/2025/Pointless/Grafiikka/AlbumCover_4096x4096.png
+!IMAGE: ../../../ArcticMusicProject/2025/Pointless/Grafiikka/AlbumCover_3000x3000.png
 
 # Why
 
