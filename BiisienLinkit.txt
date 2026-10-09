@@ -20,6 +20,7 @@ Apple Music:
 Deezer:
 Tidal:
 !IMAGE: ../../../ArcticMusicProject/2026/HallaOnceMore/Grafiikka/AlbumCover_3000x3000.png
+!SKIP
 
 # Fairytale
 
@@ -31,6 +32,7 @@ Apple Music:
 Deezer:
 Tidal:
 !IMAGE: ../../../ArcticMusicProject/2026/Fairytale/Grafiikka/AlbumCover_3000x3000.png
+!SKIP
 
 # Massive
 
@@ -92,6 +94,7 @@ SoundCloud: https://soundcloud.com/arctic-music-project/epic-success-epic-piano-
 Apple Music: https://music.apple.com/us/album/epic-success-epic-piano-remix-single/1893343462
 Deezer: https://www.deezer.com/us/album/961217341
 !IMAGE: ../../../ArcticMusicProject/2026/EpicSuccess_EpicPianoRemix/Grafiikka/AlbumCover_3000x3000.png
+!SKIP
 
 # Black Winter
 
@@ -111,6 +114,7 @@ YouTube Music:
 Spotify:
 SoundCloud: https://soundcloud.com/arctic-music-project/ultimate-dj-frostbite-xmas-remix
 !IMAGE: ../../../ArcticMusicProject/2025/Ultimate/Grafiikka/AlbumCover_4096x4096.png
+!SKIP
 
 # Pointless
 
