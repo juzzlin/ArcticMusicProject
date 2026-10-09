@@ -10,6 +10,7 @@ def parse_songs(file_path):
     
     songs = []
     current_song = None
+    archived = False
 
     for line in lines:
         stripped_line = line.strip()
@@ -19,7 +20,13 @@ def parse_songs(file_path):
         if stripped_line.startswith('#'):
             if current_song:
                 songs.append(current_song)
-            current_song = {'title': stripped_line[1:].strip(), 'links': {}, 'image': None, 'date': None, 'skip': False}
+            current_song = {'title': stripped_line[1:].strip(), 'links': {}, 'image': None, 'date': None, 'skip': False, 'archived': archived}
+        elif stripped_line == '!ARCHIVE':
+            # Every song after this marker goes into the collapsed "Older releases" section
+            if current_song:
+                songs.append(current_song)
+                current_song = None
+            archived = True
         elif stripped_line == '!SKIP' and current_song:
             current_song['skip'] = True
         elif stripped_line.startswith('!IMAGE:') and current_song:
@@ -43,44 +50,59 @@ def parse_songs(file_path):
         songs.append(current_song)
     return songs
 
+def generate_song_html(song, indent):
+    song_html_lines = []
+    image_path_html = ""
+    if song['image']:
+        sanitized_title = re.sub(r'[^a-z0-9]+', '-', song['title'].lower()).strip('-')
+        cover_dir = os.path.join('assets', 'covers', sanitized_title)
+        output_path = os.path.join(cover_dir, 'cover.png')
+        os.makedirs(cover_dir, exist_ok=True)
+        try:
+            with Image.open(song['image']) as img:
+                img.resize((256, 256)).save(output_path, 'PNG')
+            image_path_html = f'<img src="{output_path}" alt="{song["title"]} Cover Art" class="song-cover">'
+        except Exception as e:
+            print(f"Warning: Could not process image for {song['title']}. Error: {e}")
+
+    # Outer/Inner Structure
+    song_html_lines.append(f'{indent}<div class="song">') # Outer container
+    if song['date']:
+        song_html_lines.append(f"{indent}    <span class=\"song-date\">{song['date']}</span>")
+
+    song_html_lines.append(f'{indent}    <div class="song-content">') # Inner container
+    if image_path_html:
+        song_html_lines.append(f"{indent}        {image_path_html}")
+    song_html_lines.append(f'{indent}        <div class="song-details">')
+    song_html_lines.append(f"{indent}            <h3>{song['title']}</h3>")
+    song_html_lines.append(f'{indent}            <div class="song-links">')
+    for platform, url in song["links"].items():
+        song_html_lines.append(f'{indent}                <a href="{url}" target="_blank">{platform}</a>')
+    song_html_lines.append(f'{indent}            </div>')
+    song_html_lines.append(f'{indent}        </div>')
+    song_html_lines.append(f'{indent}    </div>')
+    song_html_lines.append(f'{indent}</div>')
+    return song_html_lines
+
 def process_and_generate_html(songs):
+    indent = ' ' * 16
+    visible_songs = [song for song in songs if not song.get('skip', False)]
+    front_songs = [song for song in visible_songs if not song['archived']]
+    archived_songs = [song for song in visible_songs if song['archived']]
+
     song_list_html_lines = []
-    for song in songs:
-        if song.get('skip', False):
-            continue
+    for song in front_songs:
+        song_list_html_lines.extend(generate_song_html(song, indent))
 
-        image_path_html = ""
-        if song['image']:
-            # ... (image processing logic remains the same) ...
-            sanitized_title = re.sub(r'[^a-z0-9]+', '-', song['title'].lower()).strip('-')
-            cover_dir = os.path.join('assets', 'covers', sanitized_title)
-            output_path = os.path.join(cover_dir, 'cover.png')
-            os.makedirs(cover_dir, exist_ok=True)
-            try:
-                with Image.open(song['image']) as img:
-                    img.resize((256, 256)).save(output_path, 'PNG')
-                image_path_html = f'<img src="{output_path}" alt="{song["title"]} Cover Art" class="song-cover">'
-            except Exception as e:
-                print(f"Warning: Could not process image for {song['title']}. Error: {e}")
+    if archived_songs:
+        song_list_html_lines.append(f'{indent}<details class="song-archive">')
+        song_list_html_lines.append(f'{indent}    <summary>Older releases ({len(archived_songs)})</summary>')
+        song_list_html_lines.append(f'{indent}    <div class="song-list">')
+        for song in archived_songs:
+            song_list_html_lines.extend(generate_song_html(song, indent + ' ' * 8))
+        song_list_html_lines.append(f'{indent}    </div>')
+        song_list_html_lines.append(f'{indent}</details>')
 
-        # New Outer/Inner Structure
-        song_list_html_lines.append('                <div class="song">') # Outer container
-        if song['date']:
-            song_list_html_lines.append(f"                    <span class=\"song-date\">{song['date']}</span>")
-        
-        song_list_html_lines.append('                    <div class="song-content">') # Inner container
-        if image_path_html:
-            song_list_html_lines.append(f"                        {image_path_html}")
-        song_list_html_lines.append('                        <div class="song-details">')
-        song_list_html_lines.append(f"                            <h3>{song['title']}</h3>")
-        song_list_html_lines.append('                            <div class="song-links">')
-        for platform, url in song["links"].items():
-            song_list_html_lines.append(f'                                <a href="{url}" target="_blank">{platform}</a>')
-        song_list_html_lines.append('                            </div>')
-        song_list_html_lines.append('                        </div>')
-        song_list_html_lines.append('                    </div>')
-        song_list_html_lines.append('                </div>')
-        
     return "\n".join(song_list_html_lines)
 
 def inject_html_with_markers(html_path, new_song_content):

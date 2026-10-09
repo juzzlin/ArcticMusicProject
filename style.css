@@ -88,6 +88,39 @@ h2 {
     gap: 20px;
 }
 
+.song-archive summary {
+    display: inline-block;
+    cursor: pointer;
+    list-style: none;
+    color: #FF6B00;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: 2px solid #FF6B00;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.song-archive summary::-webkit-details-marker {
+    display: none;
+}
+
+.song-archive summary::before {
+    content: '▸ ';
+}
+
+.song-archive[open] summary::before {
+    content: '▾ ';
+}
+
+.song-archive summary:hover {
+    color: #121212;
+    background-color: #FF6B00;
+}
+
+.song-archive[open] summary {
+    margin-bottom: 20px;
+}
+
 .song {
     background: #1a1a1a; 
     padding: 1.5rem;
