@@ -1,3 +1,9 @@
+# 'Hypothermia' EP released
+!DATE: 2026-10-09
+The new EP 'Hypothermia' is out now on Spotify, SoundCloud and Bandcamp!
+The EP is fully produced with our in-house <a href="https://github.com/juzzlin/Noteahead" target="_blank">Noteahead</a> music production environment, which is open source.
+Please follow the links above!
+
 # 'Pointless' released on SoundCloud
 !DATE: 2025-12-17
 'Pointless' released on SoundCloud. 
