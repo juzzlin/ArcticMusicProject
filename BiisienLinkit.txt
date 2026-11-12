@@ -13,7 +13,7 @@ Tidal:
 # Hypothermia (EP)
 
 YouTube:
-YouTube Music:
+YouTube Music: https://music.youtube.com/playlist?list=OLAK5uy_l8_o91Ny0e5T5FUFh1I_KCYq6ckZAUVGw
 Spotify: https://open.spotify.com/album/272ogN0MW1bwOkdaue2OkH
 SoundCloud: https://soundcloud.com/arctic-music-project/sets/hypothermia
 Bandcamp: https://arcticmusicproject.bandcamp.com/album/hypothermia
