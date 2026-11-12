@@ -148,15 +148,6 @@ SoundCloud: https://soundcloud.com/arctic-music-project/why
 Apple Music: https://music.apple.com/us/album/why-single/1856739083
 !IMAGE: ../../../ArcticMusicProject/2025/Why/Grafiikka/AlbumCover_3000x3000.png
 
-# Halla Returns
-
-YouTube:
-YouTube Music: https://https://music.youtube.com/watch?v=gBNgLBlXzXk
-Spotify: https://open.spotify.com/track/424khJboJjdRvAKsio2iX7
-SoundCloud: https://soundcloud.com/arctic-music-project/halla-returns
-Apple Music: https://music.apple.com/us/album/halla-returns-single/1869763369
-!IMAGE: ../../../ArcticMusicProject/2025/HallaReturns/Grafiikka/AlbumCover_4096x4096.png
-
 # Triple Distilled
 
 YouTube:
