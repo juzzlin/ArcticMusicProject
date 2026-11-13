@@ -1,11 +1,11 @@
 # Frozenland (EP)
 
 YouTube:
-YouTube Music:
-Spotify:
+YouTube Music: https://music.youtube.com/playlist?list=OLAK5uy_kXC8B2JFbrgIpGvGRZJgudzAO8plu7XDY
+Spotify: https://open.spotify.com/album/2HeT6BtxMmA7Id6acNoevp
 SoundCloud: https://soundcloud.com/arctic-music-project/sets/frozenland
 Bandcamp: https://arcticmusicproject.bandcamp.com/album/frozenland
-Apple Music:
+Apple Music: https://music.apple.com/us/album/frozenland-ep/6825337194
 Deezer:
 Tidal:
 !IMAGE: ../../../ArcticMusicProject/2026/FrozenLand_EP/Grafiikka/AlbumCover_3000x3000.png
